@@ -319,28 +319,8 @@ Review this navigation bar code for accessibility issues, touch target problems,
 
 ---
 
-## 🚀 How to Upload This Repository to Your GitHub
 
-Follow these steps to publish this under your own GitHub account:
 
-### Step 1: Create a New Repo on GitHub
-1. Go to **[github.com/new](https://github.com/new)**.
-2. Set the repository name (e.g., `ui-ux-pro-max-google-ai-studio`).
-3. Set it to **Public**.
-4. Leave "Add README" unchecked.
-5. Click **Create repository**.
-
-### Step 2: Push from Terminal
-```bash
-git init
-git add .
-git commit -m "feat: Initial release of UI/UX Pro Max for Google AI Studio"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-git push -u origin main
-```
-
-*(Windows users can double-click `setup-github-repo.bat`)*
 
 ---
 
