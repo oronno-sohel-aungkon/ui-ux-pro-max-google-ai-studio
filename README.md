@@ -1,3 +1,6 @@
+![Uploading UI Xi Pro Max_ AI Design Intelligence.png…]()
+
+
 <p align="center">
   <h1 align="center">🎨 UI/UX Pro Max for Google AI Studio</h1>
   <p align="center"><b>Turn Google Gemini into a Principal UI/UX Architect & Design Systems Lead</b></p>
