@@ -1,0 +1,48 @@
+{
+  "name": "ui-ux-pro-max-google-ai-studio",
+  "version": "2.0.0",
+  "description": "The most advanced UI/UX design system prompt for Google AI Studio — 192-archetype industry matrix, 16 color tokens, accessibility-first hierarchy.",
+  "main": "prompts/gemini-system-instruction.txt",
+  "keywords": [
+    "google-ai-studio",
+    "gemini",
+    "ui-ux",
+    "design-system",
+    "system-prompt",
+    "ai-prompt",
+    "prompt-engineering",
+    "design",
+    "tailwind",
+    "color-tokens",
+    "typography",
+    "accessibility"
+  ],
+  "author": {
+    "name": "oronno-sohel-aungkon",
+    "url": "https://github.com/oronno-sohel-aungkon"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oronno-sohel-aungkon/ui-ux-pro-max-google-ai-studio.git"
+  },
+  "homepage": "https://github.com/oronno-sohel-aungkon/ui-ux-pro-max-google-ai-studio#readme",
+  "bugs": {
+    "url": "https://github.com/oronno-sohel-aungkon/ui-ux-pro-max-google-ai-studio/issues"
+  },
+  "files": [
+    "prompts/",
+    "docs/",
+    "SYSTEM_INSTRUCTION.md",
+    "SYSTEM_INSTRUCTION_COMPACT.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "python scripts/test_prompt.py",
+    "chat": "python scripts/gemini_chat.py"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
