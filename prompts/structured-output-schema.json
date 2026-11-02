@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DesignSystemOutput",
+  "description": "Schema for structured design system generation in Google AI Studio",
+  "type": "object",
+  "properties": {
+    "project_name": {
+      "type": "string",
+      "description": "Name or archetype of the project"
+    },
+    "pattern": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "conversion_strategy": { "type": "string" },
+        "sections": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["name", "conversion_strategy", "sections"]
+    },
+    "style": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "best_for": { "type": "string" },
+        "characteristics": { "type": "string" }
+      },
+      "required": ["name", "keywords", "best_for"]
+    },
+    "colors": {
+      "type": "object",
+      "properties": {
+        "primary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "on_primary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "secondary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "on_secondary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "accent": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "on_accent": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "background": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "foreground": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "card": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "card_foreground": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "muted": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "muted_foreground": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "border": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "destructive": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "on_destructive": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "ring": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+      },
+      "required": ["primary", "accent", "background", "foreground", "card", "border", "ring"]
+    },
+    "typography": {
+      "type": "object",
+      "properties": {
+        "heading_font": { "type": "string" },
+        "body_font": { "type": "string" },
+        "google_fonts_url": { "type": "string" },
+        "mood": { "type": "string" }
+      },
+      "required": ["heading_font", "body_font", "google_fonts_url"]
+    },
+    "key_effects": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "anti_patterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "pre_delivery_audit": {
+      "type": "object",
+      "properties": {
+        "svg_icons_only": { "type": "boolean" },
+        "cursor_pointer_configured": { "type": "boolean" },
+        "contrast_ratio_compliant": { "type": "boolean" },
+        "touch_target_compliant": { "type": "boolean" },
+        "keyboard_nav_supported": { "type": "boolean" },
+        "reduced_motion_respected": { "type": "boolean" },
+        "zero_horizontal_overflow": { "type": "boolean" }
+      },
+      "required": ["svg_icons_only", "cursor_pointer_configured", "contrast_ratio_compliant"]
+    },
+    "frontend_code": {
+      "type": "object",
+      "properties": {
+        "stack": { "type": "string" },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "filename": { "type": "string" },
+              "content": { "type": "string" }
+            },
+            "required": ["filename", "content"]
+          }
+        }
+      },
+      "required": ["stack", "files"]
+    }
+  },
+  "required": ["project_name", "pattern", "style", "colors", "typography", "anti_patterns", "frontend_code"]
+}
